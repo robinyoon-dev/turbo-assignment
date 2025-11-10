@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Header } from "../components/Header";
+import { NAME } from "../../lib/constants/info";
 
 interface Photo {
   id: string;
@@ -61,9 +63,7 @@ export default function Photos() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <p className={styles.headerText}>지원자분 성함을 적어주세요</p>
-      </div>
+      <Header text={NAME} variant="gray" />
 
       <div className={styles.content}>
         <div className={styles.imageSection}>

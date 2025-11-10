@@ -1,0 +1,38 @@
+.header {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.header.gray {
+  background-color: #9ca3af;
+}
+
+.headerText {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.header.gray .headerText {
+  color: #374151;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .headerText {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .headerText {
+    font-size: 1.125rem;
+  }
+}
+
