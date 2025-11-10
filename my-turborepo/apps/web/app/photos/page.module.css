@@ -19,19 +19,6 @@
   font-weight: 500;
 }
 
-.header {
-  padding: 1.5rem;
-  text-align: center;
-  background-color: #9ca3af;
-}
-
-.headerText {
-  font-size: 0.875rem;
-  color: #374151;
-  margin: 0;
-  font-weight: 400;
-}
-
 .content {
   flex: 1;
   display: flex;
@@ -148,14 +135,6 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-  .header {
-    padding: 2rem;
-  }
-
-  .headerText {
-    font-size: 1rem;
-  }
-
   .content {
     padding: 2rem;
     gap: 2rem;
