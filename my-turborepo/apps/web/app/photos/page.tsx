@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import styles from "./page.module.css";
 import { Header } from "../components/Header";
 import { NAME } from "../../lib/constants/info";
 
@@ -45,8 +44,8 @@ export default function Photos() {
 
   if (loading) {
     return (
-      <div className={styles.loadingContainer}>
-        <div className={styles.loading}>로딩 중...</div>
+      <div className="min-h-screen bg-gray-400 flex items-center justify-center">
+        <div className="text-2xl text-white font-medium">로딩 중...</div>
       </div>
     );
   }
@@ -55,88 +54,117 @@ export default function Photos() {
 
   if (!currentPhoto) {
     return (
-      <div className={styles.loadingContainer}>
-        <div className={styles.loading}>사진을 불러올 수 없습니다.</div>
+      <div className="min-h-screen bg-gray-400 flex items-center justify-center">
+        <div className="text-2xl text-white font-medium">
+          사진을 불러올 수 없습니다.
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={styles.container}>
+    <div className="min-h-screen bg-gray-400 flex flex-col">
       <Header text={NAME} variant="gray" />
 
-      <div className={styles.content}>
-        <div className={styles.imageSection}>
-          <div className={styles.imageContainer}>
+      <div className="flex-1 flex flex-col lg:flex-row p-4 gap-6 max-w-[1600px] mx-auto w-full md:p-8 md:gap-8 lg:p-12 lg:gap-10 lg:items-start xl:gap-12">
+        {/* Image Section */}
+        <div className="w-full lg:flex-1 lg:max-w-[600px] xl:max-w-[700px]">
+          <div className="relative w-full aspect-[4/3] rounded-[20px] overflow-hidden bg-black shadow-md md:aspect-video md:rounded-3xl lg:aspect-[4/3]">
             <Image
               src={`${currentPhoto.download_url}?w=1200&h=800`}
               alt={`Photo by ${currentPhoto.author}`}
               width={1200}
               height={800}
-              className={styles.photo}
+              className="w-full h-full object-cover"
               priority
             />
           </div>
         </div>
 
-        <div className={styles.infoSection}>
-          <div className={styles.infoCard}>
-            <div className={styles.infoRow}>
-              <div className={styles.infoItem}>
-                <div className={styles.infoLabel}>id</div>
-                <div className={styles.infoValue}>{currentPhoto.id}</div>
+        {/* Info Section */}
+        <div className="w-full lg:flex-1 lg:max-w-[600px] xl:max-w-[700px] flex flex-col gap-4">
+          {/* ID and Author Card */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm md:p-8 md:rounded-[20px]">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col gap-2">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  id
+                </div>
+                <div className="text-base text-gray-500 font-normal md:text-lg">
+                  {currentPhoto.id}
+                </div>
               </div>
-              <div className={styles.infoItem}>
-                <div className={styles.infoLabel}>author</div>
-                <div className={styles.infoValue}>{currentPhoto.author}</div>
+              <div className="flex flex-col gap-2">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  author
+                </div>
+                <div className="text-base text-gray-500 font-normal md:text-lg">
+                  {currentPhoto.author}
+                </div>
               </div>
             </div>
           </div>
 
-          <div className={styles.infoCard}>
-            <div className={styles.infoRow}>
-              <div className={styles.infoItem}>
-                <div className={styles.infoLabel}>width</div>
-                <div className={styles.infoValue}>
+          {/* Width and Height Card */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm md:p-8 md:rounded-[20px]">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex flex-col gap-2">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  width
+                </div>
+                <div className="text-base text-gray-500 font-normal md:text-lg">
                   {currentPhoto.width.toLocaleString()}
                 </div>
               </div>
-              <div className={styles.infoItem}>
-                <div className={styles.infoLabel}>height</div>
-                <div className={styles.infoValue}>
+              <div className="flex flex-col gap-2">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  height
+                </div>
+                <div className="text-base text-gray-500 font-normal md:text-lg">
                   {currentPhoto.height.toLocaleString()}
                 </div>
               </div>
             </div>
           </div>
 
-          <div className={styles.infoCard}>
-            <div className={styles.infoColumn}>
-              <div className={styles.infoLabel}>url</div>
-              <a
-                href={currentPhoto.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.infoLink}
-              >
-                {currentPhoto.url}
-              </a>
-            </div>
+          {/* URLs Card */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm md:p-8 md:rounded-[20px]">
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 mb-4">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  url
+                </div>
+                <a
+                  href={currentPhoto.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 break-all underline font-normal hover:text-zinc-900 md:text-base"
+                >
+                  {currentPhoto.url}
+                </a>
+              </div>
 
-            <div className={styles.infoColumn}>
-              <div className={styles.infoLabel}>download_url</div>
-              <a
-                href={currentPhoto.download_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.infoLink}
-              >
-                {currentPhoto.download_url}
-              </a>
+              <div className="flex flex-col gap-3">
+                <div className="text-sm font-semibold text-black md:text-base">
+                  download_url
+                </div>
+                <a
+                  href={currentPhoto.download_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-500 break-all underline font-normal hover:text-zinc-900 md:text-base"
+                >
+                  {currentPhoto.download_url}
+                </a>
+              </div>
             </div>
           </div>
 
-          <button className={styles.button} onClick={handlePrev}>
+          {/* Previous Button */}
+          <button
+            className="bg-zinc-900 text-white border-none rounded-xl px-8 py-4 text-base font-medium cursor-pointer transition-all w-full min-h-[50px] hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 md:px-12 md:py-5 md:text-lg lg:max-w-[200px] lg:ml-auto"
+            onClick={handlePrev}
+          >
             이전
           </button>
         </div>
