@@ -19,9 +19,11 @@ export const Button = ({
 }: ButtonProps) => {
   
   return (
+    // 335, 48
+  
     <button
       type={type}
-      className={`bg-[#111111] text-white border-none rounded-xl p-[12px] text-base font-medium cursor-pointer transition-all w-full max-w-[320px] min-h-[50px] hover:bg-[#111111]/80 active:bg-[#111111]/80 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50 md:max-w-[400px] ${className}`}
+      className={`bg-[#111111] text-white border-none rounded-xl p-[12px] text-base font-medium cursor-pointer transition-all w-full max-w-[335px] min-h-[48px] hover:bg-[#111111]/80 active:bg-[#111111]/80 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
       onClick={onClick}
       disabled={disabled}
     >

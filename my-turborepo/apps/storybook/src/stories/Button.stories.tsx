@@ -59,16 +59,16 @@ export const Hover: Story = {
   },
 };
 
-export const Active: Story = {
+export const Pressed: Story = {
   args: {
     children: "다음",
   },
   parameters: {
-    pseudo: { active: true },
+    pseudo: { pressed: true },
     docs: {
       description: {
         story:
-          "Button in active/pressed state. Background color becomes #111111 with 80% opacity.",
+          "Button in pressed state. Background color becomes #111111 with 80% opacity.",
       },
     },
   },
@@ -131,15 +131,11 @@ export const AllStates = {
       </div>
 
       <div className="flex flex-col items-center gap-2">
-        <p className="text-sm text-gray-600 mb-2">Active/Pressed (80% opacity)</p>
+        <p className="text-sm text-gray-600 mb-2">Pressed (80% opacity)</p>
         <Button>다음</Button>
         <p className="text-xs text-gray-500 italic">Click to see effect</p>
       </div>
 
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-sm text-gray-600 mb-2">Disabled</p>
-        <Button disabled>다음</Button>
-      </div>
     </div>
   ),
   parameters: {
