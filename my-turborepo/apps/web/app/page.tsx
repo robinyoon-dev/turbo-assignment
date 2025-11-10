@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-8 md:py-12 lg:py-16">
+      <div className="flex justify-center items-center py-8 md:py-12">
         <Button onClick={handleNext}>다음</Button>
       </div>
     </div>
