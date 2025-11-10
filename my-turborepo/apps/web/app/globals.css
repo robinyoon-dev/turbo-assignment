@@ -1,1 +1,4 @@
 @import "tailwindcss";
+
+/* 모노레포 외부 소스 스캔 지시 */
+@source "../../packages/ui/**/*.{ts,tsx}";

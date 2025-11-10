@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Header } from "../components/Header";
 import { NAME } from "../../lib/constants/info";
+import { Button } from "@repo/ui/button";
 
 interface Photo {
   id: string;
@@ -161,12 +162,9 @@ export default function Photos() {
           </div>
 
           {/* Previous Button */}
-          <button
-            className="bg-zinc-900 text-white border-none rounded-xl px-8 py-4 text-base font-medium cursor-pointer transition-all w-full min-h-[50px] hover:bg-zinc-800 hover:-translate-y-0.5 active:translate-y-0 md:px-12 md:py-5 md:text-lg lg:max-w-[200px] lg:ml-auto"
-            onClick={handlePrev}
-          >
+          <Button onClick={handlePrev} className="lg:max-w-[200px] lg:ml-auto">
             이전
-          </button>
+          </Button>
         </div>
       </div>
     </div>
