@@ -162,7 +162,7 @@ export default function Photos() {
           </div>
 
           {/* Previous Button */}
-          <Button onClick={handlePrev} className="lg:max-w-[200px] lg:ml-auto">
+          <Button onClick={handlePrev}>
             이전
           </Button>
         </div>
