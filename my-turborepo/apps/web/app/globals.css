@@ -1,3 +1,7 @@
 @import "tailwindcss";
 
 @source "../../../packages/ui/src/**/*.{ts,tsx}";
+
+@theme {
+  --font-pretendard: "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}

@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Header } from "../components/Header";
-import { NAME } from "../../lib/constants/info";
+import { Header } from "../../shared/components/Header";
+import { NAME } from "../../shared/constants/info";
 import { Button } from "@repo/ui/button";
 
 interface Photo {

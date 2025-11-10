@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { NAME } from "../lib/constants/info";
-import { Header } from "./components/Header";
+import { NAME } from "../shared/constants/info";
+import { Header } from "../shared/components/Header";
 import { Button } from "@repo/ui/button";
 
 export default function Home() {
