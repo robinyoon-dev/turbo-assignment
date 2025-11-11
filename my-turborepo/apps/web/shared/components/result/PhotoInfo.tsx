@@ -1,3 +1,4 @@
+import { PreviousButton } from "../../../app/result/PreviousButton";
 import { Photo } from "../../types/photo";
 
 const PhotoInfo = ({ photo }: { photo: Photo }) => {
@@ -78,6 +79,10 @@ const PhotoInfo = ({ photo }: { photo: Photo }) => {
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div className="w-full flex justify-center items-center px-6 pb-8 md:px-8 md:pb-10 lg:px-16 lg:pb-12">
+                <PreviousButton />
             </div>
         </div>
     );
