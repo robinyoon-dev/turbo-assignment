@@ -2,7 +2,6 @@ import type { Decorator, Preview } from "@storybook/react";
 import React from "react";
 import "../src/storybook.css";
 
-
 export const globalTypes: Preview["globalTypes"] = {
   pseudoState: {
     name: "State",
@@ -12,7 +11,7 @@ export const globalTypes: Preview["globalTypes"] = {
       icon: "contrast",
       items: [
         { value: "default", title: "Default" },
-        { value: "hover",   title: "Hover" },
+        { value: "hover", title: "Hover" },
         { value: "pressed", title: "Pressed" },
       ],
     },
@@ -28,7 +27,11 @@ export const decorators: Decorator[] = [
       default: "",
     };
     const cls = map[state] ?? "";
-    return React.createElement("div", { className: cls }, React.createElement(Story));
+    return React.createElement(
+      "div",
+      { className: cls },
+      React.createElement(Story),
+    );
   },
 ];
 
@@ -46,4 +49,3 @@ const preview: Preview = {
 };
 
 export default preview;
-

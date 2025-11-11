@@ -58,6 +58,6 @@ export const MainSkeleton = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MainSkeleton;
