@@ -40,17 +40,17 @@ my-turborepo/
 │   │   │       └── photo.ts
 │   │   └── package.json
 │   │
-│   ├── storybook/                    # Storybook 워크스페이스
-│   │   ├── .storybook/
-│   │   │   ├── main.ts
-│   │   │   └── preview.ts
-│   │   ├── src/
-│   │   │   ├── stories/
-│   │   │   │   └── Button.stories.tsx
-│   │   │   └── storybook.css
-│   │   └── package.json
-│   │
-│   └── docs/                         # 문서 앱 (기본 템플릿)
+│   └──storybook/                    # Storybook 워크스페이스
+│      ├── .storybook/
+│      │   ├── main.ts
+│      │   └── preview.ts
+│      ├── src/
+│      │   ├── stories/
+│      │   │   └── Button.stories.tsx
+│      │   └── storybook.css
+│      └── package.json
+│   
+│  
 │
 ├── packages/
 │   ├── ui/                           # 공유 UI 컴포넌트 라이브러리
