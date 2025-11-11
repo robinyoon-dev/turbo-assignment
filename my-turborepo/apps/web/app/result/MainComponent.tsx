@@ -6,12 +6,7 @@ import { Photo } from "../../shared/types/photo";
 
 const MainComponent = async ({ photoData }: { photoData: Photo | null }) => {
 
-
-
-    console.log(photoData);
-
     if (!photoData) {
-        console.log('photoData 없음');
         return (
             <div className="min-h-screen bg-gray-400 flex items-center justify-center">
                 <div className="text-2xl text-white font-medium">
