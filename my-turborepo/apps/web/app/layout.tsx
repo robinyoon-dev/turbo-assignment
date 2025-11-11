@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.variable}>
-      <body className="font-pretendard">
-        {children}
-      </body>
+      <body className="font-pretendard">{children}</body>
     </html>
   );
 }

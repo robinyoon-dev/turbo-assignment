@@ -1,1 +1,1 @@
-export const NAME = '윤원빈';
+export const NAME = "윤원빈";

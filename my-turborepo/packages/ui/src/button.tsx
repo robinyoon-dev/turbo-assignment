@@ -17,10 +17,9 @@ export const Button = ({
   disabled = false,
   type = "button",
 }: ButtonProps) => {
-  
   return (
     // 335, 48
-  
+
     <button
       type={type}
       className={`btn bg-[#111111] text-white border-none rounded-xl p-[12px] text-base font-medium cursor-pointer transition-all w-full max-w-[335px] min-h-[48px] hover:opacity-80 active:opacity-80" ${className}`}

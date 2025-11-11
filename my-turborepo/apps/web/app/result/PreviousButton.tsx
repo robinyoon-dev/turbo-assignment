@@ -10,10 +10,5 @@ export function PreviousButton() {
     router.push("/");
   };
 
-  return (
-    <Button onClick={handlePrev}>
-      이전
-    </Button>
-  );
+  return <Button onClick={handlePrev}>이전</Button>;
 }
-
