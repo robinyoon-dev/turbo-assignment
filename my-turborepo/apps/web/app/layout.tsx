@@ -8,7 +8,6 @@ const pretendard = localFont({
   display: "swap",
 });
 
-
 export const metadata: Metadata = {
   title: "지원자 소개",
   description: "지원자 소개 및 포토 뷰어 애플리케이션",
@@ -19,7 +18,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="ko" className={pretendard.variable}>
       <body className="font-pretendard">{children}</body>
