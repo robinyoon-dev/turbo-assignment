@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter();
 
   const handleNext = () => {
-    router.push("/photos");
+    router.push("/result");
   };
 
   return (
