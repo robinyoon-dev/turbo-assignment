@@ -35,6 +35,7 @@ export const Default: Story = {
   args: {
     children: "다음",
   },
+  globals: { pseudoState: "default" },
   parameters: {
     docs: {
       description: {
@@ -44,12 +45,12 @@ export const Default: Story = {
   },
 };
 
-export const Hover: Story = {
+export const Hover = {
   args: {
     children: "다음",
   },
+  globals: { pseudoState: "hover" },
   parameters: {
-    pseudo: { hover: true },
     docs: {
       description: {
         story:
@@ -59,12 +60,12 @@ export const Hover: Story = {
   },
 };
 
-export const Pressed: Story = {
+export const Pressed = {
   args: {
     children: "다음",
   },
+  globals: { pseudoState: "pressed" },
   parameters: {
-    pseudo: { pressed: true },
     docs: {
       description: {
         story:
@@ -74,76 +75,41 @@ export const Pressed: Story = {
   },
 };
 
-export const Disabled: Story = {
-  args: {
-    children: "다음",
-    disabled: true,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "Disabled button state with reduced opacity and no interaction.",
-      },
-    },
-  },
-};
 
-export const PreviousButton: Story = {
-  args: {
-    children: "이전",
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: "Previous button variant used in the photos page.",
-      },
-    },
-  },
-};
 
-export const CustomClassName: Story = {
-  args: {
-    children: "Custom Button",
-    className: "lg:max-w-[200px] lg:ml-auto",
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Button with custom className for additional styling. This example shows a button with custom max-width on large screens.",
-      },
-    },
-  },
-};
 
-export const AllStates = {
-  render: () => (
-    <div className="flex flex-col gap-8 items-center p-8">
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-sm text-gray-600 mb-2">Default (#111111)</p>
-        <Button>다음</Button>
-      </div>
+// export const AllStates = {
+//   render: () => (
+//     <div className="flex flex-col gap-8 items-center p-8">
+//       <div className="flex flex-col items-center gap-2">
+//         <p className="text-sm text-gray-600 mb-2">Default (#111111)</p>
+//         <Button>다음</Button>
+//       </div>
 
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-sm text-gray-600 mb-2">Hover (80% opacity)</p>
-        <Button>다음</Button>
-        <p className="text-xs text-gray-500 italic">Hover over to see effect</p>
-      </div>
+//       <div className="flex flex-col items-center gap-2">
+//         <p className="text-sm text-gray-600 mb-2">Hover (80% opacity)</p>
+//         <Button>다음</Button>
+//         <p className="text-xs text-gray-500 italic">Hover over to see effect</p>
+//       </div>
 
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-sm text-gray-600 mb-2">Pressed (80% opacity)</p>
-        <Button>다음</Button>
-        <p className="text-xs text-gray-500 italic">Click to see effect</p>
-      </div>
+//       <div className="flex flex-col items-center gap-2">
+//         <p className="text-sm text-gray-600 mb-2">Pressed (80% opacity)</p>
+//         <Button>다음</Button>
+//         <p className="text-xs text-gray-500 italic">Click to see effect</p>
+//       </div>
 
-    </div>
-  ),
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Comparison of all button states: Default (#111111), Hover (80% opacity), Active/Pressed (80% opacity), and Disabled.",
-      },
-    },
-  },
-};
+//       <div className="flex flex-col items-center gap-2">
+//         <p className="text-sm text-gray-600 mb-2">Disabled</p>
+//         <Button disabled>다음</Button>
+//       </div>
+//     </div>
+//   ),
+//   parameters: {
+//     docs: {
+//       description: {
+//         story:
+//           "Comparison of all button states: Default (#111111), Hover (80% opacity), Active/Pressed (80% opacity), and Disabled.",
+//       },
+//     },
+//   },
+// };
