@@ -29,7 +29,10 @@ export const decorators: Decorator[] = [
     const cls = map[state] ?? "";
     return React.createElement(
       "div",
-      { className: cls },
+      { 
+        className: cls,
+        style: { fontFamily: 'var(--font-pretendard)' }
+      },
       React.createElement(Story),
     );
   },
