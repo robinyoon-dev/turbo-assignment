@@ -1,4 +1,4 @@
-import { PreviousButton } from "../../../app/result/PreviousButton";
+import { PreviousButton } from "./PreviousButton";
 import { Photo } from "../../types/photo";
 
 const PhotoInfo = ({ photo }: { photo: Photo }) => {
